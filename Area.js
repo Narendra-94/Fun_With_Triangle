@@ -10,11 +10,14 @@ function AreaOfTri(base, height) {
 
 function calAreaOfTri() {
   const area = AreaOfTri(Number(inputs[0].value), Number(inputs[1].value));
-  if (area >= 0) {
+  if (
+    Number(inputs[0].value) >= 0 &&
+    Number(inputs[1].value) >= 0 &&
+    area >= 0
+  ) {
     output.innerText = "The area of the triangle is " + area + " cm²";
   } else {
-    output.innerText =
-      "Area of triangle can't be negative. Please enter valid Number";
+    output.innerText = " Please enter valid Number(It's a negative number ) ";
   }
 }
 
